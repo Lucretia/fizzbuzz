@@ -23,9 +23,7 @@ procedure Fizz_Buzz_2 is
 begin
    for Count in 1 .. 100 loop
       declare
-         Remainder_Of_Three : constant Boolean       := Count rem 3 = 0;
-         Remainder_Of_Five  : constant Boolean       := Count rem 5 = 0;
-         Text               : constant String_Access := String_Table (Remainder_Of_Three, Remainder_Of_Five);
+         Text : constant String_Access := String_Table (Count rem 3 = 0, Count rem 5 = 0);
       begin
          -- Put (Integer'Image (Count));
 
